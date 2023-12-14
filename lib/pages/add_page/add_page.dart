@@ -240,9 +240,9 @@ class _AddPageState extends ConsumerState<AddPage> with Functions {
                               onTap: () => ref
                                   .read(transactionsProvider.notifier)
                                   .switchAccount(),
-                              child: Column(
+                              child: const Column(
                                 mainAxisAlignment: MainAxisAlignment.center,
-                                children: const [
+                                children: [
                                   Expanded(
                                       child: VerticalDivider(
                                           width: 1, color: grey2)),
@@ -560,7 +560,7 @@ class _AddPageState extends ConsumerState<AddPage> with Functions {
                           shape: RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(4)),
                         ),
-                        onPressed: () => null,
+                        onPressed: () {},
                         child: Row(
                           mainAxisSize: MainAxisSize.min,
                           children: [

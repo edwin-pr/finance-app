@@ -29,18 +29,18 @@ class _PlanningPageState extends State<PlanningPage> {
                       child: Row(children: [
                     Text("MANAGE",
                         style: Theme.of(context).textTheme.labelLarge),
-                    SizedBox(width: 5),
-                    Icon(Icons.edit, size: 13)
+                    const SizedBox(width: 5),
+                    const Icon(Icons.edit, size: 13)
                   ]))
                 ],
               ),
               const SizedBox(height: 10),
-              BudgetCard(),
+              const BudgetCard(),
               const SizedBox(height: 20),
               Text("Recurring payments",
                   style: Theme.of(context).textTheme.titleLarge),
               const SizedBox(height: 10),
-              RecurringPaymentCard()
+              const RecurringPaymentCard()
             ]));
   }
 }

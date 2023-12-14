@@ -15,7 +15,7 @@ class AccountsTab extends StatelessWidget {
             "Conti $index",
             style: Theme.of(context)
                 .textTheme
-                .bodyText1
+                .bodyLarge
                 ?.copyWith(color: Colors.red),
           ),
         );

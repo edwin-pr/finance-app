@@ -29,10 +29,10 @@ class _StructureState extends ConsumerState<Structure> {
   ];
   final List<Widget> _pages = [
     const HomePage(),
-    TransactionsPage(),
+    const TransactionsPage(),
     const SizedBox(),
-    PlanningPage(),
-    StatsPage(),
+    const PlanningPage(),
+    const StatsPage(),
   ];
 
   @override

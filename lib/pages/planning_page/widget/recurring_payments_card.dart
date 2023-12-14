@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 
-import '../../../model/recurring_transaction_amount.dart';
 
 class RecurringPaymentCard extends StatefulWidget {
   const RecurringPaymentCard({super.key});

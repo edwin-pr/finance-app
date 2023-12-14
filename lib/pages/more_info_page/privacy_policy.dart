@@ -61,7 +61,7 @@ class _PrivacyPolicyPageState extends ConsumerState<PrivacyPolicyPage> {
       body: SingleChildScrollView(
         physics: const BouncingScrollPhysics(),
         child:
-          Padding(padding: EdgeInsets.all(16.0),
+          Padding(padding: const EdgeInsets.all(16.0),
             child: Column(
               children: [
                 Text(
@@ -75,7 +75,7 @@ class _PrivacyPolicyPageState extends ConsumerState<PrivacyPolicyPage> {
                   'Information Collection and Use\n',
                   style: Theme.of(context)
                       .textTheme
-                      .headline6!
+                      .titleLarge!
                       .copyWith(color: Theme.of(context).colorScheme.primary),
                 ),
                 Text(
@@ -89,7 +89,7 @@ class _PrivacyPolicyPageState extends ConsumerState<PrivacyPolicyPage> {
                   'Log Data\n',
                   style: Theme.of(context)
                       .textTheme
-                      .headline6!
+                      .titleLarge!
                       .copyWith(color: Theme.of(context).colorScheme.primary),
                 ),
                 Text(
@@ -103,7 +103,7 @@ class _PrivacyPolicyPageState extends ConsumerState<PrivacyPolicyPage> {
                   'Service Providers\n',
                   style: Theme.of(context)
                       .textTheme
-                      .headline6!
+                      .titleLarge!
                       .copyWith(color: Theme.of(context).colorScheme.primary),
                 ),
                 Text(
@@ -117,7 +117,7 @@ class _PrivacyPolicyPageState extends ConsumerState<PrivacyPolicyPage> {
                   'Changes to This Privacy Policy\n',
                   style: Theme.of(context)
                       .textTheme
-                      .headline6!
+                      .titleLarge!
                       .copyWith(color: Theme.of(context).colorScheme.primary),
                 ),
                 Text(
@@ -131,7 +131,7 @@ class _PrivacyPolicyPageState extends ConsumerState<PrivacyPolicyPage> {
                   'Contact us\n',
                   style: Theme.of(context)
                       .textTheme
-                      .headline6!
+                      .titleLarge!
                       .copyWith(color: Theme.of(context).colorScheme.primary),
                 ),
                 RichText(

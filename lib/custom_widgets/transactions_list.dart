@@ -115,7 +115,6 @@ class TransactionTitle extends StatelessWidget with Functions {
               ),
               const Spacer(),
               RichText(
-                textScaleFactor: MediaQuery.of(context).textScaleFactor,
                 text: TextSpan(
                   children: [
                     TextSpan(
@@ -131,7 +130,7 @@ class TransactionTitle extends StatelessWidget with Functions {
                           .apply(fontFeatures: [const FontFeature.subscripts()]),
                     ),
                   ],
-                ),
+                ), textScaler: TextScaler.linear(MediaQuery.of(context).textScaleFactor),
               ),
             ],
           ),
@@ -255,7 +254,6 @@ class TransactionRow extends ConsumerWidget with Functions {
                                     ),
                                   const Spacer(),
                                   RichText(
-                                    textScaleFactor: MediaQuery.of(context).textScaleFactor,
                                     text: TextSpan(
                                       children: [
                                         TextSpan(
@@ -277,7 +275,7 @@ class TransactionRow extends ConsumerWidget with Functions {
                                           ),
                                         ),
                                       ],
-                                    ),
+                                    ), textScaler: TextScaler.linear(MediaQuery.of(context).textScaleFactor),
                                   ),
                                 ],
                               ),

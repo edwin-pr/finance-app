@@ -91,7 +91,7 @@ class AccountsSum extends StatelessWidget with Functions {
                             // Show a loading indicator while waiting for the future to complete
                             return Transform.scale(
                               scale: 0.5,
-                              child: CircularProgressIndicator(),
+                              child: const CircularProgressIndicator(),
                             );
                           } else if (snapshot.hasError) {
                             // Show an error message if the future encounters an error
@@ -100,7 +100,6 @@ class AccountsSum extends StatelessWidget with Functions {
                             // Display the result once the future completes successfully
                             final accountSum = snapshot.data ?? 0;
                             return RichText(
-                              textScaleFactor: MediaQuery.of(context).textScaleFactor,
                               text: TextSpan(
                                 children: [
                                   TextSpan(
@@ -114,7 +113,7 @@ class AccountsSum extends StatelessWidget with Functions {
                                     ),
                                   ),
                                 ],
-                              ),
+                              ), textScaler: TextScaler.linear(MediaQuery.of(context).textScaleFactor),
                             );
                           }
                         },

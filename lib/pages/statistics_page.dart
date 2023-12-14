@@ -37,7 +37,7 @@ class _StatsPageState extends ConsumerState<StatsPage> with Functions {
                       "Available liquidity",
                       style: Theme.of(context)
                           .textTheme
-                          .headline6
+                          .titleLarge
                           ?.copyWith(
                             color: Theme.of(context).colorScheme.primary,
                             fontWeight: FontWeight.w600,
@@ -50,7 +50,6 @@ class _StatsPageState extends ConsumerState<StatsPage> with Functions {
                   crossAxisAlignment: CrossAxisAlignment.end,
                   children: [
                     RichText(
-                      textScaleFactor: MediaQuery.of(context).textScaleFactor,
                       text: TextSpan(
                         children: [
                           TextSpan(
@@ -62,10 +61,9 @@ class _StatsPageState extends ConsumerState<StatsPage> with Functions {
                             style: Theme.of(context).textTheme.labelLarge?.copyWith(color: blue4)
                           ),
                         ],
-                      ),
+                      ), textScaler: TextScaler.linear(MediaQuery.of(context).textScaleFactor),
                     ),
                     RichText(
-                      textScaleFactor: MediaQuery.of(context).textScaleFactor,
                       text: TextSpan(
                         children: [
                           TextSpan(
@@ -77,7 +75,7 @@ class _StatsPageState extends ConsumerState<StatsPage> with Functions {
                             style: Theme.of(context).textTheme.labelLarge?.copyWith(fontWeight: FontWeight.w300),
                           ),
                         ],
-                      ),
+                      ), textScaler: TextScaler.linear(MediaQuery.of(context).textScaleFactor),
                     ),
                   ],
                 ),
@@ -113,7 +111,7 @@ class _StatsPageState extends ConsumerState<StatsPage> with Functions {
                   "Accounts",
                   style: Theme.of(context)
                       .textTheme
-                      .headline6
+                      .titleLarge
                       ?.copyWith(
                         color: Theme.of(context).colorScheme.primary,
                         fontWeight: FontWeight.w600,
@@ -158,7 +156,6 @@ class _StatsPageState extends ConsumerState<StatsPage> with Functions {
                                 Row(
                                   children: [
                                     RichText(
-                                      textScaleFactor: MediaQuery.of(context).textScaleFactor,
                                       text: TextSpan(
                                         children: [
                                           TextSpan(
@@ -166,7 +163,7 @@ class _StatsPageState extends ConsumerState<StatsPage> with Functions {
                                             style: Theme.of(context).textTheme.bodySmall?.copyWith(color: blue1),
                                           ),
                                         ],
-                                      ),
+                                      ), textScaler: TextScaler.linear(MediaQuery.of(context).textScaleFactor),
                                     ),
                                     Expanded(
                                       child: Text(

@@ -95,14 +95,14 @@ class _CollaboratorsPageState extends ConsumerState<CollaboratorsPage> {
       body: SingleChildScrollView(
         physics: const BouncingScrollPhysics(),
         child:
-          Padding(padding: EdgeInsets.all(8.0),
+          Padding(padding: const EdgeInsets.all(8.0),
             child: Column(
               children: [
                 ListView.separated(
                   itemCount: collaborators.length,
                   shrinkWrap: true,
                   physics: const NeverScrollableScrollPhysics(),
-                  separatorBuilder: (context, index) => Divider(),
+                  separatorBuilder: (context, index) => const Divider(),
                   itemBuilder: (context, i) {
                     List option = collaborators[i];
                     return InkWell(
@@ -117,19 +117,19 @@ class _CollaboratorsPageState extends ConsumerState<CollaboratorsPage> {
                           children: [
                             Text(
                               option[0].toString(),
-                              style: Theme.of(context).textTheme.headline6!.copyWith(color: Theme.of(context).colorScheme.primary),
+                              style: Theme.of(context).textTheme.titleLarge!.copyWith(color: Theme.of(context).colorScheme.primary),
                               textAlign: TextAlign.left,
                             ),
                             const SizedBox(height: 4),
                             Text(
                               option[1].toString(),
-                              style: Theme.of(context).textTheme.bodyText2!.copyWith(color: Theme.of(context).colorScheme.primary),
+                              style: Theme.of(context).textTheme.bodyMedium!.copyWith(color: Theme.of(context).colorScheme.primary),
                               textAlign: TextAlign.left,
                             ),
                             const SizedBox(height: 4),
                             Text(
                               option[2].toString(),
-                              style: Theme.of(context).textTheme.caption!.copyWith(color: Theme.of(context).colorScheme.primary),
+                              style: Theme.of(context).textTheme.bodySmall!.copyWith(color: Theme.of(context).colorScheme.primary),
                               textAlign: TextAlign.left,
                             ),
                           ],

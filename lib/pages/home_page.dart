@@ -43,7 +43,6 @@ class _HomePageState extends ConsumerState<HomePage> with Functions {
                           ?.copyWith(color: Theme.of(context).colorScheme.primary),
                     ),
                     RichText(
-                      textScaleFactor: MediaQuery.of(context).textScaleFactor,
                       text: TextSpan(
                         children: [
                           TextSpan(
@@ -61,7 +60,7 @@ class _HomePageState extends ConsumerState<HomePage> with Functions {
                                 ?.copyWith(color: Theme.of(context).colorScheme.primary),
                           ),
                         ],
-                      ),
+                      ), textScaler: TextScaler.linear(MediaQuery.of(context).textScaleFactor),
                     ),
                   ],
                 ),
@@ -74,7 +73,6 @@ class _HomePageState extends ConsumerState<HomePage> with Functions {
                       style: Theme.of(context).textTheme.labelMedium,
                     ),
                     RichText(
-                      textScaleFactor: MediaQuery.of(context).textScaleFactor,
                       text: TextSpan(
                         children: [
                           TextSpan(
@@ -86,7 +84,7 @@ class _HomePageState extends ConsumerState<HomePage> with Functions {
                             style: Theme.of(context).textTheme.labelLarge?.copyWith(color: green),
                           ),
                         ],
-                      ),
+                      ), textScaler: TextScaler.linear(MediaQuery.of(context).textScaleFactor),
                     ),
                   ],
                 ),
@@ -99,7 +97,6 @@ class _HomePageState extends ConsumerState<HomePage> with Functions {
                       style: Theme.of(context).textTheme.labelMedium,
                     ),
                     RichText(
-                      textScaleFactor: MediaQuery.of(context).textScaleFactor,
                       text: TextSpan(
                         children: [
                           TextSpan(
@@ -111,7 +108,7 @@ class _HomePageState extends ConsumerState<HomePage> with Functions {
                             style: Theme.of(context).textTheme.labelLarge?.copyWith(color: red),
                           ),
                         ],
-                      ),
+                      ), textScaler: TextScaler.linear(MediaQuery.of(context).textScaleFactor),
                     ),
                   ],
                 ),
@@ -329,9 +326,9 @@ class _HomePageState extends ConsumerState<HomePage> with Functions {
               const SizedBox(height: 16),
               Container(
                 margin: const EdgeInsets.only(left: 16.0, right: 16.0),
-                child: Row(
+                child: const Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: const [
+                  children: [
                     BudgetCircularIndicator(
                       title: "TOTALE",
                       amount: 320,
